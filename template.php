@@ -96,14 +96,16 @@ function kogyo_preprocess(&$vars, $hook) {
  * @param $hook
  *   The name of the template being rendered ("page" in this case.)
  */
-/* -- Delete this line if you want to use this function
 function kogyo_preprocess_page(&$vars, $hook) {
-  $vars['sample_variable'] = t('Lorem ipsum.');
+  global $base_path;
+  $path = $base_path . drupal_get_path('theme', 'kogyo');
+  $vars['header_image'] = $path . '/images/kogyo/kogyo_banner.jpg';
 
+  
+  dsm($vars);
   // To remove a class from $classes_array, use array_diff().
   //$vars['classes_array'] = array_diff($vars['classes_array'], array('class-to-remove'));
 }
-// */
 
 /**
  * Override or insert variables into the node templates.

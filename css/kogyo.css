@@ -1,8 +1,237 @@
-/* 
-    Document   : kogyo
-    Created on : Jan 23, 2012, 2:35:58 PM
-    Author     : dannyjoris
-    Description:
-        Purpose of the stylesheet follows.
-*/
+/* General */
 
+/* main color: #9a0000 */
+/* cdio color: #309495 */
+
+body
+{
+  color: #666;
+  font-family: Verdana,Arial,Helvetica,sans-serif;
+  font-size: 12px;
+}
+
+/*.clearfix::after
+{
+  content: " 0020";
+  line-height: 0px;
+  height: 0px;
+  overflow: hidden;
+  font-size: 0px;
+}*/
+
+h1
+{
+  
+}
+
+h2
+{
+
+}
+
+.block h2.title
+{
+
+}
+
+h3
+{
+
+}
+
+h4
+{
+
+}
+
+h5
+{
+
+}
+
+h6
+{
+
+}
+
+h1.title,
+h2.title,
+h3.title
+{
+
+}
+
+a,
+a:link
+{
+
+}
+
+a:hover
+{
+
+}
+
+a:active,
+a.active
+{
+
+}
+
+table
+{
+  width: 100%;
+}
+
+table tr
+{
+  
+}
+
+table tr.first
+{
+  border-top: 1px solid #CCC;
+}
+
+table tr.odd
+{
+  background-color: #eee;
+}
+
+table tr.even
+{
+  background-color: #fafafa;
+}
+
+table tr td,
+table tr th
+{
+  padding: 5px 5px 5px 5px;
+}
+
+#page-wrapper-wrapper
+{
+  padding: 0px 0px 50px 0px;
+}
+
+#page
+{
+  font-size: 12px;
+  line-height: 130%;
+}
+
+
+
+
+
+
+
+/* header top */
+
+#header-top-wrapper
+{
+  width: 100%;
+  height: 50px;
+  background: #BAB6A3;
+}
+
+#header-top
+{
+  width: 960px;
+  height: 50px;
+  margin: 0px auto;
+  
+  background: url('../images/kogyo/header-top.png') 553px 0px no-repeat transparent;
+}
+
+
+
+/* header bottom */
+
+#header-wrapper-bottom
+{
+  width: 100%;
+  background: #CFCAB5;
+}
+
+#header
+{
+  width: 960px;
+  height: 250px;
+  margin: 0px auto;
+}
+
+/* navigation */
+
+#navigation-wrapper
+{
+  width: 100%;
+  background-color: #254461;
+  color: #B6B6B6;
+  padding: 15px 0;
+}
+
+#navigation
+{
+  float: none;
+  width: 960px;
+  min-height: 37px;
+  margin: 0px auto;
+  
+  font-size: 13px;
+  font-weight: bold;
+}
+
+#navigation ul,
+#navigation ul li
+{
+  float: left;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  list-style: none outside none;
+  list-style-image: none;
+}
+
+#navigation ul li a:link,
+#navigation ul li a:visited
+{
+  display: block;
+  margin: 0 14px 0 0;
+  padding: 10px 25px;
+
+  text-decoration: none;
+  color: #362C20;
+  background-color: #BAB6A3;
+  border-radius: 5px 5px 5px 5px;
+}
+
+#navigation ul li a:hover
+{
+  background-color: #E0DDCF;
+  color: #362C20;
+  text-decoration: none;
+}
+
+#navigation ul li a.active
+{
+  background-color: #6A624D;
+  color: #CFCAB5;
+  text-decoration: none;
+}
+
+/* main */
+
+/* sidebar(s) */
+
+/* footer */
+
+#footer-wrapper
+{
+  width: 100%;
+}
+
+#footer
+{
+  width: 960px;
+  margin: 0px auto;
+}
