@@ -104,7 +104,7 @@ function kogyo_preprocess_page(&$vars, $hook) {
   // get the disclaimer message
   $vars['disclaimer_message'] = kogyo_disclaimer();
   
-  dsm($vars);
+//  dsm($vars);
   // To remove a class from $classes_array, use array_diff().
   //$vars['classes_array'] = array_diff($vars['classes_array'], array('class-to-remove'));
 }
