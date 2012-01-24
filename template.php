@@ -101,6 +101,8 @@ function kogyo_preprocess_page(&$vars, $hook) {
   $path = $base_path . drupal_get_path('theme', 'kogyo');
   $vars['header_image'] = $path . '/images/kogyo/kogyo_banner.jpg';
 
+  // get the disclaimer message
+  $vars['disclaimer_message'] = kogyo_disclaimer();
   
   dsm($vars);
   // To remove a class from $classes_array, use array_diff().
@@ -155,3 +157,28 @@ function kogyo_preprocess_block(&$vars, $hook) {
   $vars['sample_variable'] = t('Lorem ipsum.');
 }
 // */
+
+/*
+ * Hardcoded disclaimer message
+ */
+function kogyo_disclaimer() {
+  
+  $output = '<div class="disclaimer">';
+
+  $output .= '<a href="http://www.library.pitt.edu/" class="uls" title="University Library System"></a>'; 
+
+  
+  $output .= '<p class="copyright">';  
+  $output .= '<strong>' . t('Copyright') . ' &copy; ' . date("Y") . '</strong>';  
+  $output .= ' ' . t('Hosted by the <a href="!DRL" title="">Digital Research Library</a> within the <a href="!ULS" title="University Library System">University Library System</a> at the <a href="!UPITT" title="University of Pittsburgh">University of Pittsburgh</a>.', array('!DRL' => 'http://www.library.pitt.edu/libraries/drl/', '!ULS' => 'http://www.library.pitt.edu/', '!UPITT' => 'http://www.pitt.edu/')); 
+//  $output .= '';  
+  $output .= '</p>';  
+  
+  $output .= '<p class="disclaimer">';
+  $output .= t('The University of Pittsburgh owns the physical material presented on this website. We provide access to the digital images for personal, noncommercial, educational and research purposes only. Without written permission from the University of Pittsburgh stating otherwise, prohibited uses include, but are not limited to systematic downloading of images using robots, scripts, or other software programs; commercial use and resale of the images; or redistribution, publication or retransmission of the images beyond what is allowed by the U.S. copyright code. The University of Pittsburgh holds the copyright to most of the images.');  
+  $output .= '</p>';  
+ 
+  $output .= '</div>';
+  
+  return $output;
+}

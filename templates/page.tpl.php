@@ -126,6 +126,23 @@
     <?php if ($logo): ?>
       <a href="http://www.pitt.edu/" title="<?php print t('University of Pittsburgh'); ?>" rel="University of Pittsburgh" id="logo"><img src="<?php print $logo; ?>" alt="<?php print t('University of Pittsburgh'); ?>" /></a>
     <?php endif; ?>
+      
+    <?php if ($secondary_links): ?>
+      <?php print theme(array('links__system_secondary_menu', 'links'), $secondary_links,
+        array(
+          'id' => 'secondary-menu',
+          'class' => 'links clearfix',
+        ),
+        array(
+          'text' => t('Secondary menu'),
+          'level' => 'h2',
+          'class' => 'element-invisible',
+        ));
+      ?>
+      
+    <?php endif; ?>
+      
+      
   </div></div><!-- /#header-top, /#header-top-wrapper -->
   
   <div id="header-wrapper-bottom">    
@@ -205,36 +222,29 @@
 
     </div></div><!-- /#main, /#main-wrapper -->
 
-    <?php if ($footer || $footer_message || $secondary_links): ?>
+    <?php if ($footer_message): ?>
       
-
-        <?php print theme(array('links__system_secondary_menu', 'links'), $secondary_links,
-          array(
-            'id' => 'secondary-menu',
-            'class' => 'links clearfix',
-          ),
-          array(
-            'text' => t('Secondary menu'),
-            'level' => 'h2',
-            'class' => 'element-invisible',
-          ));
-        ?>
-
         <?php if ($footer_message): ?>
           <div id="footer-message"><?php print $footer_message; ?></div>
         <?php endif; ?>
 
-
-
-      </div></div>
     <?php endif; ?>
-
+  
   </div></div><!-- /#page, /#page-wrapper -->
 
+  <div id="footer-wrapper-top"></div>        
+        
   <div id="footer-wrapper"><div id="footer"><div class="section">
-    
-    <?php print $footer; ?>
-    
+    <?php if ($footer): ?>    
+      <?php print $footer; ?>
+    <?php endif; ?>
+        
+    <?php if ($disclaimer_message): ?>    
+      <?php print $disclaimer_message; ?>
+    <?php endif; ?>
+        
+        
+        
     <?php print $page_closure; ?>
 
     <?php print $closure; ?>
