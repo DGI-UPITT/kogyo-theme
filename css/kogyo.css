@@ -305,6 +305,9 @@ ul#secondary-menu li a:hover
 
 #footer div.disclaimer
 {
+  float: left;
+  width: 100%;
+  margin: 10px 0px 0px 0px;
   font-size: 10px;
   color: #C8CCB3;
 }
