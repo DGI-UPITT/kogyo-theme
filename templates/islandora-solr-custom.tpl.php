@@ -28,8 +28,6 @@
 <!--mods_dateIssued_dt ~ Issued-->
 <!--PID -> image-->
 
-<?php //print_r($$result); ?>
-
 <?php print $switch_rendered; ?>
 
 <?php if ($style == 'div'): ?>
