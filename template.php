@@ -104,7 +104,17 @@ function kogyo_preprocess_page(&$vars, $hook) {
   // get the disclaimer message
   $vars['disclaimer_message'] = kogyo_disclaimer();
   
-//  dsm($vars);
+  // add subtitle if available
+  $node = $vars['node'];
+  
+  if (isset($node) AND !empty($node->field_subtitle[0]['value'])) {
+    $vars['title'] .= '<br />' . '<span class="subtitle">&#x201C;' . $node->field_subtitle[0]['value'] . '&#x201D;</span>';
+  }
+   
+    
+/*   dsm($vars); */
+
+
   // To remove a class from $classes_array, use array_diff().
   //$vars['classes_array'] = array_diff($vars['classes_array'], array('class-to-remove'));
 }

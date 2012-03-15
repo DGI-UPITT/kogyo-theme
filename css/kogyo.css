@@ -267,6 +267,37 @@ ul#secondary-menu li a:hover
 
 /* main */
 
+h1.title
+{
+  font-size: 30px;
+  font-weight: normal;
+  line-height: 35px;
+  margin: 20px 0px;
+}
+
+h1.title .subtitle
+{
+  font-size: 80%;
+  line-height: 29px;
+}
+
+.sidebar-second #content
+{
+  margin-left: 0;
+  margin-right: -600px;
+  width: 600px;
+}
+
+.region-sidebar-second
+{
+  margin-left: 600px;
+  width: 302px;
+}
+
+
+
+
+
 /* sidebar(s) */
 
 /* footer wrapper top */

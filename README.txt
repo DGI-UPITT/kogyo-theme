@@ -28,6 +28,11 @@ X Shortcut icon
 X Primary links
 X Secondary links 
 
+Download and enable the skinr module
+- drush dl skinr
+- drush en skinr
+
+
 
 Notes:
 ------
