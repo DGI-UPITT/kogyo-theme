@@ -277,6 +277,14 @@ ul#secondary-menu li a:hover
 
 /* main */
 
+
+.with-navigation #content,
+.with-navigation .region-sidebar-first,
+.with-navigation .region-sidebar-second
+{
+  margin-top: 1.8em;
+}
+
 h1.title
 {
   font-size: 30px;
@@ -304,6 +312,13 @@ h1.title .subtitle
   width: 302px;
 }
 
+
+
+.node .content img
+{
+  border: 1px solid #CCCCCC;
+  padding: 5px;
+}
 
 
 
@@ -386,6 +401,11 @@ h1.title .subtitle
   margin: 13px 0px 13px 15px;
 }
 
+#block-islandora_solr_search-advanced
+{
+  padding-top: 10px;
+}
+
 ul.quicktabs_tabs
 {
   padding: 0px 0px 0px 0px;
@@ -402,14 +422,25 @@ ul.quicktabs_tabs
   padding: 5px 7px;
 
   border-radius: 5px 5px 5px 5px;
-  font-size: 80%;
+  font-size: 90%;
 }
 
 .quicktabs_tabs li.active a
 {
-  background: #6A624D;
-  color: #CFCAB5;
+  background: #BAB6A3;
+  color: #fafafa;
+/*   color: #F0EEE8; */
 }
+
+.quicktabs_tabs li.active a:hover
+{
+  text-decoration: none;
+}
+
+
+
+
+
 
 
 /* Content */

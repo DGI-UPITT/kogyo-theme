@@ -99,13 +99,20 @@
   <div class="content">
     <?php print $content; ?>
     <?php
-      // get contact info variables
-      $contact_person = $node->field_contact_person[0]['value'];
-      $contact_email = $node->field_contact_email[0]['value'];
-      $contact_title = $node->field_contact_title[0]['value'];
-      // print contact info
-      print '<div class="kogyo-contact-info">' . l($contact_person, 'mailto:' . $contact_email, array(absolute => TRUE)) . ' - ' . $contact_title . '</div>';
-        
+      if ($node->nid != 7) {
+        // get contact info variables
+        $contact_person = $node->field_contact_person[0]['value'];
+        $contact_email = $node->field_contact_email[0]['value'];
+        $contact_title = $node->field_contact_title[0]['value'];
+        // print contact info
+        print '<div class="kogyo-contact-info">' . l($contact_person, 'mailto:' . $contact_email, array(absolute => TRUE)) . ' - ' . $contact_title . '</div>';
+      }
+      else {
+        // nid == 7 (front page)
+        // print general contact info
+        print '<div class="kogyo-contact-info">' . t('Please <a href="!mailurl">contact</a> us with your comments or corrections', array('!mailurl' => 'http://www.library.pitt.edu/services/aska.html')) . '</div>';
+      }
+      
     ?>
   </div>
 
