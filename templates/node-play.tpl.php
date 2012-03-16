@@ -98,8 +98,42 @@
 
   <div class="content">
     <?php //print $content; ?>
-    <?php dsm($node); ?>
-    content
+    
+    <?php print $node->content['body']['#value']; ?>
+    
+    <?php //dsm($node); ?>
+    <?php $cck_fields = array('field_tab_content', 'field_tab_appearance', 'field_tab_artist', 'field_tab_publication', 'field_tab_collections' );    
+
+      // set variables
+      $tab_titles = array();
+      $tab_content = array();
+      $i = 0;
+      foreach ($cck_fields as $key => $value) {
+        if ($node->{$value}[0]['value'] != NULL) {
+          $hidden = 'hidden';
+          $active = '';
+          if ($i == 0) {
+            $hidden = 'exposed';
+            $active = 'active';
+            $i++;
+          }
+
+          $title = $node->content[$value]['field']['#title'];
+          $tab_titles[] = array('data' => $title, 'class' => 'tab-' . $value . ' ' . $active);
+   
+          $tab_content[] = '<div class="tab-' . $value . ' kogyo-tab-content ' . $hidden . '">' . $node->{$value}[0]['value'] . '</div>';
+        }
+      }
+/*       dsm($tab_titles); */
+/*       dsm($tab_content); */
+      print '<div class="kogyo-tabs-wrapper">';
+      print theme('item_list', $tab_titles, NULL, 'ul', array('class' => 'kogyo-tabs'));
+      print '<div class="kogyo-tabs-content-wrapper">';
+      foreach ($tab_content as $key => $value) {
+        print $value;
+      }
+      print '</div></div>';
+    ?>
     
     
   </div>

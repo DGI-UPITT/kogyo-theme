@@ -450,3 +450,49 @@ ol.islandora_solr_results
 .islandora_solr_result .mods-name-creator-ms 
 {
 }
+
+
+/* Kogyo play tab markup */
+
+.kogyo-tabs-wrapper
+{
+
+}
+
+.kogyo-tabs-wrapper .hidden
+{
+  display: none;
+}
+
+.kogyo-tabs-content-wrapper
+{
+
+}
+
+ul.kogyo-tabs
+{
+  padding: 0px 0px 0px 0px;
+}
+
+ul.kogyo-tabs li
+{
+  display: inline-block;
+  list-style: none;
+  list-style-image: none;
+  
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+ul.kogyo-tabs li.hover
+{
+  color: green;
+}
+
+ul.kogyo-tabs li.active
+{
+  color: blue;
+}
+
+
+
