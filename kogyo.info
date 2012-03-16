@@ -39,6 +39,7 @@ stylesheets[all][]   = css/comments.css
 stylesheets[all][]   = css/forms.css
 stylesheets[all][]   = css/fields.css
 stylesheets[all][]   = css/kogyo.css
+stylesheets[all][]   = css/kogyo-skinr.css
 stylesheets[print][] = css/print.css
 ; stylesheets[handheld][] = css/mobile.css
 ; stylesheets[only screen and (max-device-width: 480px)][] = css/iphone.css
@@ -68,6 +69,14 @@ regions[content_bottom] = Content bottom
 regions[header]         = Header
 regions[footer]         = Footer
 regions[page_closure]   = Page closure
+
+; Skinr settings
+skinr[kogyo][title] = Block style
+skinr[kogyo][type] = radios
+skinr[kogyo][options][1][label] = Box-style w grey/brown background
+skinr[kogyo][options][1][class] = kogyo-box-style
+
+
 
   ; Various page elements output by the theme can be toggled on and off. The
   ; "features" control which of these check boxes display on the

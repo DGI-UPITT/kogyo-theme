@@ -1,1 +1,12 @@
 /* Skinr Styles for Kogyo */
+
+.kogyo-box-style
+{
+  float: left;
+  background-color: #F0EEE8;
+  border: 1px solid #CCCCCC;
+  display: block;
+  margin-bottom: 20px;
+  padding: 25px;
+  width: 250px;
+}

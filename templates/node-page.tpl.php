@@ -97,57 +97,16 @@
   <?php endif; ?>
 
   <div class="content">
+    <?php print $content; ?>
     <?php
-      // print body
-      print $node->content['body']['#value'];
-      
-      // define requested cck fields
-      $cck_fields = array('field_tab_content', 'field_tab_appearance', 'field_tab_artist', 'field_tab_publication', 'field_tab_collections' );    
-
-      // set variables
-      $tab_titles = array();
-      $tab_content = array();
-      $i = 0;
-      foreach ($cck_fields as $key => $value) {
-        // check if cck field is not empty
-        if ($node->{$value}[0]['value'] != NULL) {
-          $hidden = 'hidden';
-          $active = '';
-          if ($i == 0) {
-            $hidden = 'exposed';
-            $active = 'active';
-            $i++;
-          }
-          // populate tab array
-          $title = $node->content[$value]['field']['#title'];
-          $tab_titles[] = array('data' => $title, 'class' => 'tab-' . $value . ' ' . $active);
-          // populate content array
-          $tab_content[] = '<div class="tab-' . $value . ' kogyo-tab-content ' . $hidden . '">' . $node->{$value}[0]['value'] . '</div>';
-        }
-      }
-      // print the tab wrapper
-      print '<div class="kogyo-tabs-wrapper">';
-      // print tabs
-      print theme('item_list', $tab_titles, NULL, 'ul', array('class' => 'kogyo-tabs'));
-      // print content wrapper
-      print '<div class="kogyo-tabs-content-wrapper">';
-      // print cck content
-      foreach ($tab_content as $key => $value) {
-        print $value;
-      }
-      print '</div></div>';
-    
       // get contact info variables
       $contact_person = $node->field_contact_person[0]['value'];
       $contact_email = $node->field_contact_email[0]['value'];
       $contact_title = $node->field_contact_title[0]['value'];
       // print contact info
       print '<div class="kogyo-contact-info">' . l($contact_person, 'mailto:' . $contact_email, array(absolute => TRUE)) . ' - ' . $contact_title . '</div>';
-    
-    
+        
     ?>
-    
-    
   </div>
 
   <?php print $links; ?>
