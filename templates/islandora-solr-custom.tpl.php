@@ -28,8 +28,6 @@
 <!--mods_dateIssued_dt ~ Issued-->
 <!--PID -> image-->
 
-<?php //print_r($$result); ?>
-
 <?php print $switch_rendered; ?>
 
 <?php if ($style == 'div'): ?>
@@ -61,7 +59,7 @@
       // if no page thumbnail exists, use the parent (book cover) one
       $is_page = ( strpos( $result['rels_hasModel_uri_ms']['value'], 'pageCModel' ) !== false && !empty($result['rels_isMemberOfCollection_uri_ms']['value'] ) );
       $item_title = $result['mods_title_ms']['value'];
-      $link_url = $base_url.'/fedora/repository/'.$result['PID']['value'].'/-/'.urlencode($item_title);
+      $link_url = $base_url.'/fedora/repository/'.$result['PID']['value'].'/-/'.urlencode($item_title).'/'.$variables['results_raw']->responseHeader->params->q;
       $subtitle_value = ( empty( $result['mods_subTitle_ms']['value']) ? false : $result['mods_subTitle_ms']['value'] );
       $creator_value = ( empty( $result['mods_name_creator_ms']['value']) ? false : $result['mods_name_creator_ms']['value'] );
       $source_collection_value = ( empty( $result['mods_host_title_ms']['value']) ? false : $result['mods_host_title_ms']['value'] );
