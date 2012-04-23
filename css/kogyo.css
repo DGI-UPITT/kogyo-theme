@@ -488,6 +488,8 @@ ul.quicktabs_tabs
 
 .kogyo-tabs-content-wrapper
 {
+  float: left;
+  width: 100%;
   background-color: #F0F3F4;
   border-color: #999999 #999999 #CCCCCC #CCCCCC;
   border-style: solid;
@@ -497,12 +499,15 @@ ul.quicktabs_tabs
 
 ul.kogyo-tabs
 {
+  float: left;
+  width: 100%;
   padding: 0px 0px 0px 0px;
   margin: 0px 0px 0px 0px;
 }
 
 ul.kogyo-tabs li
 {
+  float: left;
   display: inline-block;
   list-style: none;
   list-style-image: none;
